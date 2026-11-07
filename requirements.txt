@@ -1,5 +1,6 @@
-llama-index
-llama-index-llms-gemini
-llama-index-embeddings-gemini
-google-generativeai
-ipywidgets
+llama-index==0.14.25
+llama-index-llms-gemini==0.6.2
+llama-index-embeddings-gemini==0.4.2
+google-generativeai==0.8.6
+ipywidgets==8.1.9
+llama-index-readers-file
