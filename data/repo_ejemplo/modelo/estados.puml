@@ -1,0 +1,12 @@
+@startuml
+' Máquina de estados del Pedido
+
+[*] --> PENDIENTE : crear_pedido()
+PENDIENTE --> CONFIRMADO : confirmar()\n(descuenta stock)
+PENDIENTE --> CANCELADO : cancelar()
+CONFIRMADO --> ENVIADO : enviar()
+CONFIRMADO --> CANCELADO : cancelar()\n(repone stock)
+ENVIADO --> ENTREGADO : entregar()
+ENTREGADO --> [*]
+CANCELADO --> [*]
+@enduml
