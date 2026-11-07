@@ -30,11 +30,7 @@ pasos en orden y verifica que veas lo que se indica en cada "✔ Qué deberías 
 ### Paso 1.1 — Instalar las herramientas
 - Ejecuta la celda **"1.1 Instalar dependencias"** (clic en el ▶ a la izquierda, o `Shift + Enter`).
 
-✔ Qué deberías ver: texto de instalación durante 1–2 minutos.
-
-> ⚠️ Puede aparecer un aviso que empieza con `ERROR: pip's dependency resolver...`
-> (menciona `protobuf`). **No es un error**: es un conflicto de versiones con paquetes
-> que ya trae Colab y que el taller no usa. Ignóralo y sigue con la 1.2.
+✔ Qué deberías ver: `✅ Dependencias instaladas.`
 
 ### Paso 1.2 — Pegar tu llave
 - Ejecuta la celda **"1.2 Pega tu llave gratuita de Gemini"**.
