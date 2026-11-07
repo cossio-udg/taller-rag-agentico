@@ -1,0 +1,43 @@
+@startuml
+' Diagrama de clases del Sistema de Ventas
+
+class Cliente {
+  - id: int
+  - nombre: str
+  - email: str
+}
+
+class Producto {
+  - id: int
+  - nombre: str
+  - precio: float
+  - stock: int
+  + reducir_stock(cantidad: int): void
+  + reponer_stock(cantidad: int): void
+}
+
+class Pedido {
+  - id: int
+  - fecha: date
+  - estado: EstadoPedido
+  + total(): float
+}
+
+class LineaPedido {
+  - cantidad: int
+  + subtotal(): float
+}
+
+enum EstadoPedido {
+  PENDIENTE
+  CONFIRMADO
+  ENVIADO
+  ENTREGADO
+  CANCELADO
+}
+
+Cliente "1" -- "*" Pedido : realiza
+Pedido "1" -- "*" LineaPedido : contiene
+LineaPedido "*" -- "1" Producto : referencia
+Pedido "1" -- "1" EstadoPedido : tiene
+@enduml
